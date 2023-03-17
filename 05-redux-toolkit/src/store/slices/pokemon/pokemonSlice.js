@@ -5,7 +5,7 @@ export const pokemonSlice = createSlice({
   initialState: {
     isLoading: false,
     selectedPokemons: [],
-    page: 0,
+    nextPage: 0,
   },
   reducers: {
     startLoadingPokemons: (state) => {
@@ -17,7 +17,7 @@ export const pokemonSlice = createSlice({
     ) => {
       state.selectedPokemons = pokemons;
       state.isLoading = isLoading;
-      state.page = page;
+      state.nextPage = page;
     },
   },
 });
